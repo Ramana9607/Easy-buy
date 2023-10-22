@@ -8,28 +8,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="demo.css">
 </head>
-<header><div>
-    <ul>
-        <li><img src="logo3.png" href="#"></li>
-        <li><input type="text" class="s" placeholder="search for items">
-            <button type="submit" class="b">Search</button></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <li><a href="pr1.html" class="active">Home</a></li>
-        <li><a href="#" class="active">Categories</a></li>
-        <li><a href="#" class="active">Cart</a></li>
-        <li><a href="#" class="active">Menu ▼</a>
-        </li>
-        <li id="contact"><a href="login.html">Sign in</a></li>
-       
-    </ul>
+<header>
+    <div>
+        <div>
+            <ul>
+                <li><img src="logo3.png" href="#"></li>
+                <li><input type="text" class="s" placeholder="search for items">
+                    <button type="submit" class="b">Search</button></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="pr1.html" class="active">Home</a></li>
+                <li><a href="#" class="active">Categories</a></li>
+                <li><a href="#" class="active">Cart</a></li>
+                <li><a href="#" class="active" id="open-menu" onclick="togglemenu()">Menu ▼</a>
+                </li>
+                <li id="contact"><a href="login.html">Sign in</a></li>
+            </ul>
+        </div>
+        <div class="sub-menu-wrap" id="submenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="user.png">
+                    <h3>User_name</h3>
+                </div>
+                <hr>
+                <a href="#" class="sub-menu-link">
+                    <img src="user.png">
+                    <p>Edit profile</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <img src="settings.png">
+                    <p>Settings</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <img src="help.jpg">
+                    <p>Help & support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <img src="logout.jpg">
+                    <p>logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
     </div>
+
 </header>
 
 <body>
+    
     <div class="card">
-        <center> <img  class="tools" src="brush.jpg" alt="Card 1">
+        <center> <img class="tools" src="brush.jpg" alt="Card 1">
             <center>
                 <h4>colgate toothbrush(pack of 4)
                     <pre></pre> 150/- </h3>
@@ -211,9 +244,16 @@
                     <p><button>Order</button></p>
 
                     <button>Add to cart</button>
-    
+
     </div>
 </body>
+<script>
+    let submenu = document.getElementById("submenu");
+    function togglemenu() {
+        submenu.classList.toggle("open-menu")
+    }
+    
+</script>
 <footer class="foot">
 
 </footer>
